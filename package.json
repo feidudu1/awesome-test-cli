@@ -1,0 +1,39 @@
+{
+  "name": "awesome-test-cli",
+  "version": "1.0.0",
+  "description": "yafei的第一个脚手架",
+  "main": "index.js",
+  "bin": {
+    "awesome-test": "bin/main.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feidudu1/awesome-test-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feidudu1/awesome-test-cli/issues"
+  },
+  "homepage": "https://github.com/feidudu1/awesome-test-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "download-git-repo": "^2.0.0",
+    "execa": "^2.0.4",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^6.5.1",
+    "lru-cache": "^5.1.1",
+    "minimist": "^1.2.5",
+    "ora": "3.4.0",
+    "semver": "^6.3.0",
+    "string.prototype.padstart": "^3.0.0",
+    "validate-npm-package-name": "^3.0.0"
+  }
+}
