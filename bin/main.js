@@ -4,7 +4,7 @@ const minimist = require("minimist");
 
 program.version(require("../package").version).usage("<command> [options]");
 
-// 创建命令
+// 创建项目命令 主入口
 program
   .command("create <app-name>")
   .description("create a new project")
@@ -27,6 +27,16 @@ program
     require("../lib/preCreate")(name, options);
   });
 
+// 创建页面命令 主入口
+program
+  .command("page <page-name>")
+  .description("create a new page")
+  .option("-f, --force", "Overwrite target directory if it exists")
+  .action((name, cmd) => {
+    const options = cleanArgs(cmd);
+    require("../lib/prePage")(name, options);
+  });
+
 // 获取参数
 function cleanArgs(cmd) {
   const args = {};
@@ -45,5 +55,5 @@ function camelize(str) {
   return str.replace(/-(\w)/g, (_, c) => (c ? c.toUpperCase() : ""));
 }
 
-// 调用
+// 调用 这个不能少，不然跑不起来
 program.parse(process.argv);
